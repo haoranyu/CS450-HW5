@@ -38,6 +38,28 @@ error_arr = []
 y_t1 = 1 / 101
 
 plot_init("t", "y_h", "Plot for Problem5 a) Forward Euler")
+
+h = 0.015625
+t,y = forward_euler(0, 1, h)
+plot_draw(t, y, h)
+h_arr.append(h)
+error_arr.append(np.abs(y[-1] - y_t1))
+
+
+h = 0.03125
+t,y = forward_euler(0, 1, h)
+plot_draw(t, y, h)
+h_arr.append(h)
+error_arr.append(np.abs(y[-1] - y_t1))
+
+
+h = 0.0625
+t,y = forward_euler(0, 1, h)
+plot_draw(t, y, h)
+h_arr.append(h)
+error_arr.append(np.abs(y[-1] - y_t1))
+
+
 h = 0.125
 t,y = forward_euler(0, 1, h)
 plot_draw(t, y, h)
