@@ -44,4 +44,5 @@ for i in range(18):
 
 plot_init()
 plot_draw(h, error)
+
 plt.savefig("problem4_c.png")

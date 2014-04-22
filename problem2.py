@@ -89,16 +89,18 @@ def evaluate(F, X, n):
 	return m,t,s,c
 
 def empirical_order(H, E):
-	n = len(H)
-	p_arr = []
-	for i in range(n-1):
-		H1 = H[i]
-		H2 = H[i+1]
-		E1 = E[i]
-		E2 = E[i+1]
-		p = np.log(E2/E1) / np.log(H2/H1)
-		p_arr.append(p)
-	return np.sum(p_arr)/n
+    H = np.copy(H)
+    E = np.copy(E)
+    n = len(H)
+    p_arr = []
+    for i in range(n-1):
+    	H1 = H[i]
+    	H2 = H[i+1]
+    	E1 = E[i]
+    	E2 = E[i+1]
+    	p = np.log(E2/E1) / np.log(H2/H1)
+    	p_arr.append(p)
+    return np.sum(p_arr)/n
 
 
 np.random.seed(3)

@@ -66,23 +66,23 @@ plot_draw(t, y, h)
 h_arr.append(h)
 error_arr.append(np.abs(y[-1] - y_t1))
 
-h = 0.25
-t,y = forward_euler(0, 1, h)
-plot_draw(t, y, h)
-h_arr.append(h)
-error_arr.append(np.abs(y[-1] - y_t1))
+# h = 0.25
+# t,y = forward_euler(0, 1, h)
+# plot_draw(t, y, h)
+# h_arr.append(h)
+# error_arr.append(np.abs(y[-1] - y_t1))
 
-h = 0.5
-t,y = forward_euler(0, 1, h)
-plot_draw(t, y, h)
-h_arr.append(h)
-error_arr.append(np.abs(y[-1] - y_t1))
+# h = 0.5
+# t,y = forward_euler(0, 1, h)
+# plot_draw(t, y, h)
+# h_arr.append(h)
+# error_arr.append(np.abs(y[-1] - y_t1))
 
-h = 1
-t,y = forward_euler(0, 1, h)
-plot_draw(t, y, h)
-h_arr.append(h)
-error_arr.append(np.abs(y[-1] - y_t1))
+# h = 1
+# t,y = forward_euler(0, 1, h)
+# plot_draw(t, y, h)
+# h_arr.append(h)
+# error_arr.append(np.abs(y[-1] - y_t1))
 plt.savefig("problem5_a.png")
 
 plot_init("h", "error", "Plot for Problem5 a) error versus h")
